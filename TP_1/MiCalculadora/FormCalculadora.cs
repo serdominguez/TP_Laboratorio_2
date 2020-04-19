@@ -67,42 +67,24 @@ namespace MiCalculadora
 
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
+            
             string resul = lblResultado.Text;
-            double numero = double.Parse(resul);
-            long num = (long)numero;
-    
-            lblResultado.Text = Convert.ToString(num, 2);
+            
+            resul = Numero.DecimalBinario(resul);
+
+            lblResultado.Text = resul;
+
         }
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
             string numero = lblResultado.Text;
-            int flag = 0;
-            long res = 0;
 
-            foreach (char item in numero)
-            {
-                if (item != '0' && item != '1')
-                {
-                    MessageBox.Show("No es binario");
-                    flag = 1;
-                    break;
-                }
+            numero = Numero.BinarioADecimal(numero);
 
-            }
-            if (flag == 0)
-            {
-                for(int i = 0; i < numero.Length; i++) 
-                {
-                    if (numero[i] == '1')
-                    {
-                        res = res + (long)Math.Pow(2, (numero.Length - (i+1)));
-                    }
-                }
-            }
-
-            lblResultado.Text = res.ToString();
+            lblResultado.Text = numero;
   
+
         }
     }
 }

@@ -107,7 +107,6 @@
             // 
             // cmbOperador
             // 
-            this.cmbOperador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cmbOperador.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbOperador.FormattingEnabled = true;
             this.cmbOperador.Items.AddRange(new object[] {
