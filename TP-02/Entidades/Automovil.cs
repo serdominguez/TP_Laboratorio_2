@@ -16,9 +16,9 @@ namespace Entidades
         /// <summary>
         /// Por defecto, TIPO será Monovolumen
         /// </summary>
-        /// <param name="marca"></param>
-        /// <param name="chasis"></param>
-        /// <param name="color"></param>
+        /// <param name="marca">Es la marca del auto</param>
+        /// <param name="chasis">Es la patente del auto</param>
+        /// <param name="color">Es el color del auto</param>
         public Automovil(EMarca marca, string codigo, ConsoleColor color)
             : base(codigo, marca, color)
         {
@@ -26,11 +26,12 @@ namespace Entidades
         }
 
         /// <summary>
-        /// constructor que recibe tipo
+        /// Constructor que recibe tipo
         /// </summary>
-        /// <param name="marca"></param>
-        /// <param name="chasis"></param>
-        /// <param name="color"></param>
+        /// <param name="marca">Es la marca del auto</param>
+        /// <param name="chasis">Es la patente del auto</param>
+        /// <param name="color">Es el color del auto</param>
+        /// <param name="tipo">Es el tipo del auto</param>
         public Automovil(EMarca marca, string codigo, ConsoleColor color, ETipo tipo) 
             :this (marca, codigo, color)
         {
@@ -48,6 +49,10 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Muestra los datos de un auto
+        /// </summary>
+        /// <returns>Devuelve string</returns>
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

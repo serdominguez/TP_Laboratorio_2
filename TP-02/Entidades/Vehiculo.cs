@@ -23,6 +23,12 @@ namespace Entidades
         string chasis;
         ConsoleColor color;
         
+        /// <summary>
+        /// Construnctor del objeto
+        /// </summary>
+        /// <param name="chasis">Es la patente del vehiculo</param>
+        /// <param name="marca">Es la marca del vehiculo</param>
+        /// <param name="color">Es el color del vehiculo</param>
         public Vehiculo(string chasis, EMarca marca, ConsoleColor color)
         {
             this.marca = marca;
@@ -46,7 +52,10 @@ namespace Entidades
         {
             return (string)this;
         }
-
+        /// <summary>
+        /// Sobrecarga explicita, recibe un vehiculo devuelve un string con sus datos
+        /// </summary>
+        /// <param name="p">el vehiculo que recibe</param>
         public static explicit operator string(Vehiculo p)
         {
             StringBuilder sb = new StringBuilder();
