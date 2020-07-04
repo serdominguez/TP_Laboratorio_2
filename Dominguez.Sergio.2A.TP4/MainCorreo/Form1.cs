@@ -36,15 +36,15 @@ namespace MainCorreo
             {
                 if (item.Estado == Paquete.EEstado.Ingresado)
                 {
-                    this.lstEstadoIngresado.Items.Add(item.ToString());
+                    this.lstEstadoIngresado.Items.Add(item);
                 }
                 else if (item.Estado == Paquete.EEstado.EnViaje)
                 {
-                    this.lstEstadoEnViaje.Items.Add(item.ToString());
+                    this.lstEstadoEnViaje.Items.Add(item);
                 }
                 else if(item.Estado == Paquete.EEstado.Entregado)
                 {
-                    this.lstEstadoEntregado.Items.Add(item.ToString());
+                    this.lstEstadoEntregado.Items.Add(item);
                 }
             }
 
